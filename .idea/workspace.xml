@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2e85e523-3e8f-4a8d-85f4-51f6409656a4" name="Changes" comment="feat : config flickr">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fullstack/backend/config/FlickrConfigurationConnect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/config/FlickrConfigurationConnect.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/exception" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="521906ba-7dc6-45b5-b91d-d0acdc2644f5" />
+        <option name="url" value="git@github.com:Youva-git/fullstack-back-end.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2Iiy0OEXGbc3uvag79vEeikUut8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/djellal/Bureau/Back-full-stack/Back-final/BackEnd-fullStack&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;a115a25065b29adfe4c0b73391cd5b3a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.fullstack.backend.service.impls" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/fullstack/backend/filter" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/fullstack/backend/utils" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.fullstack.backend.interceptor" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.fullstack.backend.service" />
+      <recent name="com.fullstack.backend.service.impls" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.fullstack.backend.service.impls" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fullstack.backend.modele" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="String " />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BackEndApplication">
+    <configuration name="TestFlickr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fullstack.backend.utils.TestFlickr" />
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fullstack.backend.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategorieServiceImplsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fullstack.backend.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fullstack.backend.service.impls" />
+      <option name="MAIN_CLASS_NAME" value="com.fullstack.backend.service.impls.CategorieServiceImplsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategorieServiceImplsTest.shouldCreateCategorieWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="back-end" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fullstack.backend.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fullstack.backend.service.impls" />
+      <option name="MAIN_CLASS_NAME" value="com.fullstack.backend.service.impls.CategorieServiceImplsTest" />
+      <option name="METHOD_NAME" value="shouldCreateCategorieWithSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="back-end" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fullstack.backend.BackEndApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SwaggerCodegen">
+      <option name="activeConfigurationType" value="FILE" />
+      <option name="configurationPath" value="" />
+      <option name="customJreEnabled" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="enableDebugLogging" value="false" />
+      <option name="generateToPath" value="$PROJECT_DIR$/gen" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="jdkPath" value="" />
+      <option name="language" value="java" />
+      <option name="specificationPath" value="$PROJECT_DIR$/target/swagger-ui/swagger.json" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CategorieServiceImplsTest.shouldCreateCategorieWithSuccess" />
+        <item itemvalue="JUnit.CategorieServiceImplsTest" />
+        <item itemvalue="Application.TestFlickr" />
+        <item itemvalue="Application.TestFlickr" />
+        <item itemvalue="JUnit.CategorieServiceImplsTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e85e523-3e8f-4a8d-85f4-51f6409656a4" name="Changes" comment="" />
+      <created>1670678485077</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670678485077</updated>
+      <workItem from="1670678486844" duration="13210000" />
+      <workItem from="1670703041686" duration="337000" />
+      <workItem from="1671272587635" duration="2762000" />
+      <workItem from="1671275963092" duration="9644000" />
+      <workItem from="1671395999165" duration="652000" />
+      <workItem from="1671472153037" duration="1790000" />
+      <workItem from="1671480350792" duration="248000" />
+      <workItem from="1671542218528" duration="949000" />
+      <workItem from="1671555379973" duration="32607000" />
+      <workItem from="1671632241629" duration="10055000" />
+      <workItem from="1671700795747" duration="36575000" />
+      <workItem from="1671742930694" duration="4000" />
+      <workItem from="1671761099744" duration="81000" />
+      <workItem from="1671791099698" duration="1092000" />
+      <workItem from="1671795032260" duration="12933000" />
+      <workItem from="1671824493300" duration="74467000" />
+      <workItem from="1672219564765" duration="65061000" />
+      <workItem from="1672354925622" duration="4109000" />
+      <workItem from="1672383436303" duration="33000" />
+      <workItem from="1672384204943" duration="212000" />
+      <workItem from="1672384653913" duration="15316000" />
+      <workItem from="1672419833439" duration="1210000" />
+      <workItem from="1672421642421" duration="13609000" />
+      <workItem from="1672485677870" duration="10048000" />
+      <workItem from="1672496655420" duration="186000" />
+      <workItem from="1672594413592" duration="304000" />
+      <workItem from="1672684111097" duration="7000" />
+      <workItem from="1672738195799" duration="3269000" />
+      <workItem from="1672773283384" duration="143000" />
+      <workItem from="1672780810135" duration="592000" />
+      <workItem from="1672941488964" duration="554000" />
+      <workItem from="1672944843933" duration="43000" />
+      <workItem from="1672992658847" duration="520000" />
+      <workItem from="1672993388641" duration="1484000" />
+      <workItem from="1673020182568" duration="338000" />
+      <workItem from="1673021922924" duration="101000" />
+      <workItem from="1673022299829" duration="1000" />
+      <workItem from="1673023101396" duration="88000" />
+      <workItem from="1673029830947" duration="918000" />
+      <workItem from="1673034406127" duration="311000" />
+      <workItem from="1673077053254" duration="73000" />
+      <workItem from="1673077152873" duration="22000" />
+      <workItem from="1673080290645" duration="987000" />
+      <workItem from="1673084959521" duration="299000" />
+      <workItem from="1673085904300" duration="611000" />
+      <workItem from="1673171433588" duration="31453000" />
+      <workItem from="1673211867776" duration="222000" />
+      <workItem from="1673342067455" duration="3614000" />
+      <workItem from="1676393995105" duration="172000" />
+      <workItem from="1676394176451" duration="3684000" />
+    </task>
+    <task id="LOCAL-00001" summary="Init projet">
+      <created>1671274680821</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671274680821</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Init projet">
+      <created>1671276663337</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671276663337</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Init projet">
+      <created>1671277282454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671277282454</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Init projet">
+      <created>1671279690892</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671279690892</updated>
+    </task>
+    <task id="LOCAL-00005" summary="dump version">
+      <created>1671280170682</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671280170682</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat : CRUD User&#10;&#10;Ajout de l'API CRUD de l'utilisateur">
+      <created>1671280943703</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671280943703</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat : CRUD boutique&#10;&#10;Ajout de l'API CRUD boutique">
+      <created>1671281289715</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671281289715</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat : CRUD produit&#10;&#10;Ajout de l'API CRUD produit">
+      <created>1671281365266</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671281365266</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat : CRUD categorie&#10;&#10;Ajout de l'API CRUD categorie">
+      <created>1671281514435</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671281514435</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat : associer une ou plusieurs catégories à un produit">
+      <created>1671281844429</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671281844429</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat : API ajout d'une association d'un ou plusieurs produits à une ou plusieurs boutique">
+      <created>1671282089111</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671282089111</updated>
+    </task>
+    <task id="LOCAL-00012" summary="build : ajout fichier de config">
+      <created>1671282439856</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671282439856</updated>
+    </task>
+    <task id="LOCAL-00013" summary="dump version">
+      <created>1671282601908</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1671282601908</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add readme">
+      <created>1676395631586</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676395631586</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat : initialisation du projet">
+      <created>1676396958253</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676396958253</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat : gestion des utilisateur avec leurs roles">
+      <created>1676397185244</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397185244</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat : documentation swagger">
+      <created>1676397292603</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397292603</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat : gestion de boutiques">
+      <created>1676397385778</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397385778</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat : gestion de categories">
+      <created>1676397446812</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397446812</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat : gestion de produits">
+      <created>1676397528554</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397528554</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat : utils">
+      <created>1676397610497</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397610497</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat : spring sécurité">
+      <created>1676397725875</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397725875</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat : gestion des exceptions">
+      <created>1676397803237</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397803237</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat : config flickr">
+      <created>1676397870055</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397870055</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="Init projet" />
+    <MESSAGE value="feat : CRUD User&#10;&#10;Ajout de l'API CRUD de l'utilisateur" />
+    <MESSAGE value="feat : CRUD boutique&#10;&#10;Ajout de l'API CRUD boutique" />
+    <MESSAGE value="feat : CRUD produit&#10;&#10;Ajout de l'API CRUD produit" />
+    <MESSAGE value="feat : CRUD categorie&#10;&#10;Ajout de l'API CRUD categorie" />
+    <MESSAGE value="feat : associer une ou plusieurs catégories à un produit" />
+    <MESSAGE value="feat : API ajout d'une association d'un ou plusieurs produits à une ou plusieurs boutique" />
+    <MESSAGE value="build : ajout fichier de config" />
+    <MESSAGE value="dump version" />
+    <MESSAGE value="add readme" />
+    <MESSAGE value="feat : initialisation du projet" />
+    <MESSAGE value="feat : gestion des utilisateur avec leurs roles" />
+    <MESSAGE value="feat : documentation swagger" />
+    <MESSAGE value="feat : gestion de boutiques" />
+    <MESSAGE value="feat : gestion de categories" />
+    <MESSAGE value="feat : gestion de produits" />
+    <MESSAGE value="feat : utils" />
+    <MESSAGE value="feat : spring sécurité" />
+    <MESSAGE value="feat : gestion des exceptions" />
+    <MESSAGE value="feat : config flickr" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : config flickr" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/back_end$BackEndApplication.ic" NAME="BackEndApplication Coverage Results" MODIFIED="1673179390784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
