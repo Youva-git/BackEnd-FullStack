@@ -95,19 +95,19 @@ public class BoutiqueController {
 
     @PreAuthorize("hasAnyAuthority('ADMIN')")
     @PostMapping(ENDPOINT_ADD_USER_TO_BOUTIQUE)
-    public String addUserToBoutique(@RequestBody String emailUser, @RequestBody Integer idBoutique){
+    public String addUserToBoutique(@RequestParam String emailUser, @RequestParam Integer idBoutique){
         return vBoutiqueService.addUserToBoutique(emailUser, idBoutique);
     }
 
     @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
     @PostMapping(ENDPOINT_ADD_CATEGORIE_TO_BOUTIQUE)
-    public String addCategorieToBoutique(@RequestBody Integer idBoutique, @RequestBody Integer idCategorie){
+    public String addCategorieToBoutique(@RequestParam Integer idBoutique, @RequestParam Integer idCategorie){
         return vBoutiqueService.addCategorieToBoutique(idBoutique, idCategorie);
     }
 
     @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
-    @PostMapping(ENDPOINT_ADD_PRODUIT_TO_BOUTIQUE)
-    public String addProduitToBoutique(@RequestBody Integer idBoutique, @RequestBody Integer idProduit){
+    @PostMapping(value = ENDPOINT_ADD_PRODUIT_TO_BOUTIQUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public String addProduitToBoutique(@RequestParam Integer idBoutique, @RequestParam Integer idProduit){
         return vBoutiqueService.addProduitToBoutique(idBoutique, idProduit);
     }
 

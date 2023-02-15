@@ -28,7 +28,7 @@ public class AppUser {
             joinColumns = @JoinColumn( name = "idUser" ),
             inverseJoinColumns = @JoinColumn( name = "idRole" ) )
     private Collection<AppRole> appRoles = new ArrayList<>();
-    @OneToMany
+    @ManyToMany
     @JoinTable( name = "Users_boutique_Associations",
             joinColumns = @JoinColumn( name = "idUser" ),
             inverseJoinColumns = @JoinColumn( name = "idboutique" ) )

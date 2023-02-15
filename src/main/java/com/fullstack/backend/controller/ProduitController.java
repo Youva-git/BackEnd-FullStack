@@ -103,7 +103,7 @@ public class ProduitController {
     })
     @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
     @PostMapping(ENDPOINT_ADD_CATEGORIES_PRODUIT)
-    public String addCategoriesToProduit(@RequestBody List<Integer> idCategories, @RequestBody Integer idProduit){
+    public String addCategoriesToProduit(@RequestParam List<Integer> idCategories, @RequestParam Integer idProduit){
         return vProduitService.addCategoriesToProduit(idCategories, idProduit);
     }
 }
