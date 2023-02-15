@@ -115,27 +115,27 @@ public class RemplissageAutoBdd {
         AddBoutiquesToUsers();
     }
     private void AddBoutiquesToUsers(){
-        vAppUserService.addBoutiqueToUser("manager1@gmail.com", 1);
-        vAppUserService.addBoutiqueToUser("manager2@gmail.com", 2);
-        vAppUserService.addBoutiqueToUser("manager3@gmail.com", 5);
-        vAppUserService.addBoutiqueToUser("manager4@gmail.com", 9);
-        vAppUserService.addBoutiqueToUser("manager5@gmail.com", 11);
+        vAppUserService.addBoutiqueToUser("alice.bob@gmail.com", 1);
+        vAppUserService.addBoutiqueToUser("david.lee@gmail.com", 2);
+        vAppUserService.addBoutiqueToUser("emily.smith@gmail.com", 5);
+        vAppUserService.addBoutiqueToUser("michael.johnson@gmail.com", 9);
+        vAppUserService.addBoutiqueToUser("samantha.brown@gmail.com", 11);
 
-        vBoutiqueService.addUserToBoutique("manager1@gmail.com", 1);
-        vBoutiqueService.addUserToBoutique("manager1@gmail.com", 3);
-        vBoutiqueService.addUserToBoutique("manager1@gmail.com", 4);
+        vBoutiqueService.addUserToBoutique("alice.bob@gmail.com", 1);
+        vBoutiqueService.addUserToBoutique("alice.bob@gmail.com", 3);
+        vBoutiqueService.addUserToBoutique("alice.bob@gmail.com", 4);
 
-        vBoutiqueService.addUserToBoutique("manager2@gmail.com", 2);
-        vBoutiqueService.addUserToBoutique("manager2@gmail.com", 6);
-        vBoutiqueService.addUserToBoutique("manager2@gmail.com", 8);
+        vBoutiqueService.addUserToBoutique("david.lee@gmail.com", 2);
+        vBoutiqueService.addUserToBoutique("david.lee@gmail.com", 6);
+        vBoutiqueService.addUserToBoutique("david.lee@gmail.com", 8);
 
-        vBoutiqueService.addUserToBoutique("manager3@gmail.com", 5);
-        vBoutiqueService.addUserToBoutique("manager3@gmail.com", 7);
+        vBoutiqueService.addUserToBoutique("emily.smith@gmail.com", 5);
+        vBoutiqueService.addUserToBoutique("emily.smith@gmail.com", 7);
 
-        vBoutiqueService.addUserToBoutique("manager4@gmail.com", 9);
-        vBoutiqueService.addUserToBoutique("manager4@gmail.com", 10);
+        vBoutiqueService.addUserToBoutique("michael.johnson@gmail.com", 9);
+        vBoutiqueService.addUserToBoutique("michael.johnson@gmail.com", 10);
 
-        vBoutiqueService.addUserToBoutique("manager5@gmail.com", 11);
-        vBoutiqueService.addUserToBoutique("manager5@gmail.com", 12);
+        vBoutiqueService.addUserToBoutique("samantha.brown@gmail.com", 11);
+        vBoutiqueService.addUserToBoutique("samantha.brown@gmail.com", 12);
     }
 }
