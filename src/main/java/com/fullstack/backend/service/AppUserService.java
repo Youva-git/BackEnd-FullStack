@@ -25,6 +25,7 @@ public interface AppUserService {
     AppUserDto ChangeMdp(ChangerMdpUserDto User) throws InvalidOperationException;
 
     String addRoleToUser(String email, String role);
+    String changeRole(String email, String role);
 
     String addBoutiqueToUser(String email, Integer idBoutique);
 

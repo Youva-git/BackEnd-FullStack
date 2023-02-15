@@ -18,7 +18,7 @@ public interface Constants {
       public final String ENDPOINT_FIND_BY_ID_BOUTIQUE= "/findByIdBoutique/{idBoutique}";
       public final String ENDPOINT_FIND_BY_CODE_PRODUIT= "/findByCodeProduit/{codeProduit}";
       public final String ENDPOINT_ADD_NEW_ROLE = "/addNewRoles";
-      public final String ENDPOINT_ADD_ROLE_TO_USER = "/addRoleToUser";
+      public final String ENDPOINT_CHANGE_ROLE_TO_USER = "/changeRole";
       public final String ENDPOINT_PAGE_USER = "/pageUsers";
       public final String ENDPOINT_PROFILE_USER= "/profile";
       public final String ENDPOINT_ADD_CATEGORIE_TO_BOUTIQUE = "/addCategorieToBoutique";

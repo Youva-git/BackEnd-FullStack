@@ -21,6 +21,7 @@ import static com.fullstack.backend.utils.Constants.ROLE_ADMIN;
 import static com.fullstack.backend.utils.Constants.ROLE_VENDEUR_LIVREUR;
 
 import javax.transaction.Transactional;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -139,6 +140,18 @@ public class AppUserServiceImpl implements AppUserService {
         }
         vAppUser.getAppRoles().add(vAppRole);
         return "Role ajouter avec succés !";
+    }
+    @Override
+    public String changeRole(String email, String role) {
+        AppUser vAppUser = AppUserDto.toEntity(findByEmail(email));
+        AppRole vAppRole = vRoleRepository.findByRoleName(role);
+        if(vAppRole == null){
+            log.warn("Role introuvable !");
+            throw new EntityNotFoundException("Role introuvable !", ErrorCodes.ROLE_NOT_FOUND);
+        }
+        vAppUser.setAppRoles((Collection<AppRole>) new AppRole());
+        vAppUser.getAppRoles().add(vAppRole);
+        return "Role mis à jour avec succés !";
     }
 
     @Override

@@ -102,9 +102,9 @@ public class UserController {
             @ApiResponse(code = 404, message = "Aucun utilisateur/role n'a été trouvé dans la BDD.")
     })
     @PreAuthorize("hasAnyAuthority('ADMIN')")
-    @PostMapping(ENDPOINT_ADD_ROLE_TO_USER)
-    public String addRoleToUser(@RequestBody RoleUserFrom roleUserFrom){
-        return vUserService.addRoleToUser(roleUserFrom.getEmail(), roleUserFrom.getRoleName());
+    @PostMapping(ENDPOINT_CHANGE_ROLE_TO_USER)
+    public String changeRole(@RequestBody RoleUserFrom roleUserFrom){
+        return vUserService.changeRole(roleUserFrom.getEmail(), roleUserFrom.getRoleName());
     }
 
     @ApiOperation(value = "Afficher tous les utilisateurs de la BDD avec pagination.", response = ProduitDto.class)
