@@ -20,6 +20,7 @@ public class ProduitDto {
     private Integer id;
     private String nom;
     private String description;
+    private String descriptionEN;
     private String codeProduit;
     private Date creationData;
     private Double prix;
@@ -35,6 +36,7 @@ public class ProduitDto {
                 .id(produit.getIdProduit())
                 .nom(produit.getNom())
                 .description(produit.getDescription())
+                .descriptionEN(produit.getDescriptionEN())
                 .codeProduit(produit.getCodeProduit())
                 .prix(produit.getPrix())
                 .idBoutique(produit.getIdBoutique())
@@ -51,6 +53,7 @@ public class ProduitDto {
         vProduit.setIdProduit(produitDto.getId());
         vProduit.setNom(produitDto.getNom());
         vProduit.setDescription(produitDto.getDescription());
+        vProduit.setDescriptionEN(produitDto.getDescriptionEN());
         vProduit.setCodeProduit(produitDto.getCodeProduit());
         vProduit.setCreationData(produitDto.getCreationData());
         vProduit.setPrix(produitDto.getPrix());

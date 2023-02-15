@@ -17,6 +17,8 @@ public class Produit extends AbstractEntity {
     private Integer idProduit;
     @Column(name = "codeProduit", nullable = false)
     private String codeProduit;
+    @Column(name = "descriptionEn")
+    private String descriptionEN;
     @Column(name = "prix", nullable = false)
     private Double prix;
     @Column(name = "idBoutique")

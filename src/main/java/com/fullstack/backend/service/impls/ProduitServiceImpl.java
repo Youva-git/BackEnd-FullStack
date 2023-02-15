@@ -98,6 +98,7 @@ public class ProduitServiceImpl implements ProduitService {
                 .map(p-> {
                     p.setNom(produit.getNom());
                     p.setDescription(produit.getDescription());
+                    p.setDescription(produit.getDescriptionEN());
                     p.setPrix(produit.getPrix());
                     return vProduitRepository.save(ProduitDto.toEntity(ProduitDto.fromEntity(p)));
                 })
