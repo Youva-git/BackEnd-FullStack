@@ -30,7 +30,6 @@ public class BoutiqueDto {
     private Boolean conge;
     private Integer idUser;
     private Collection<Categorie> categories = new ArrayList<>();
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Collection<Produit> produits = new ArrayList<>();
     public static BoutiqueDto fromEntity(Boutique boutique){
         if(boutique == null){
