@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -62,7 +61,10 @@ public class RemplissageAutoBdd {
         List<List<ProduitDto>> vListsProduits= Arrays.asList(LIST_PRODUITS_SAMSUNG, LIST_PRODUIT_HAWAII,
                 LIST_PRODUIT_CHAUSSEURS_HOMME, LIST_PRODUIT_CHAUSSEURS_FEMME, LIST_PRODUIT_ANIMAUX,
                 LIST_PRODUIT_ACCESSOIRES_ANIMAUX, LIST_PRODUIT_BRICOLAGE_MAISON, LIST_PRODUIT_JEUX_VIDEO,
-                LIST_PRODUIT_JOUETS
+                LIST_PRODUIT_JOUETS, LIST_PRODUIT_AUTOMATIQUE, LIST_PRODUIT_MECANIQUE, LIST_PRODUIT_QUARTZ,
+                LIST_PRODUIT_OR, LIST_PRODUIT_ARGENT, LIST_PRODUIT_ACCESSOIRES, LIST_PRODUIT_CUIR,
+                LIST_PRODUIT_SEMILI_CUIR, LIST_PRODUIT_ORDINATEURS_PORTABLE, LIST_PRODUIT_ACCESSOIRE_INFORMATIQUE,
+                LIST_PRODUIT_VETEMENTS_HOMME, LIST_PRODUIT_VETEMENTS_FEMME
         );
         List<String> vListNomBoutiquesPourProduit = Arrays.asList(
                 "phone", "phone", "Total Look", "Total Look", "Animalerie", "Animalerie", "Youni", "Guao Jeux",
@@ -82,23 +84,23 @@ public class RemplissageAutoBdd {
     }
     private void FillingUpCategorie(List<CategorieDto> listCategories, String nomBoutique){
         for(CategorieDto c:listCategories){
-            vCategorieService.create(c);
+            CategorieDto ct = vCategorieService.create(c);
             vBoutiqueService.addCategorieToBoutique(
                     vBoutiqueService.findByNom(nomBoutique).getId(),
-                    vCategorieService.findByNom(c.getNom()).getId()
+                    ct.getId()
             );
         }
     }
     private void FillingUpProduit(List<ProduitDto> listProduits, String nomBoutique, String nomCategorie){
         for(ProduitDto p:listProduits){
-            vProduitService.create(p);
+            ProduitDto pr = vProduitService.create(p);
             vCategorieService.addProduitToCategorie(
                     vCategorieService.findByNom(nomCategorie).getId(),
-                    vProduitService.findByNom(p.getNom()).getId()
+                    pr.getId()
             );
             vBoutiqueService.addProduitToBoutique(
                     vBoutiqueService.findByNom(nomBoutique).getId(),
-                    vProduitService.findByNom(p.getNom()).getId()
+                    pr.getId()
             );
         }
     }
