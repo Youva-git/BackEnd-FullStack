@@ -16,11 +16,13 @@ public class Boutique extends AbstractEntity{
     @GeneratedValue
     @Column(name = "id")
     private Integer idBoutique;
+    @Column(columnDefinition = "TEXT")
     private String horaire;
     private Boolean conge;
     @Column(name = "user")
     private String user;
-
+    @Column(name = "idUser")
+    private Integer idUser;
     @OneToMany
     @JoinTable( name = "Boutique_CategorieAssociations",
             joinColumns = @JoinColumn( name = "idBoutique" ),

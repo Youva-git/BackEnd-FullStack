@@ -97,12 +97,21 @@ public class CategorieServiceImpl implements CategorieService {
     }
 
     @Override
-    public String addCategorieToProduits(Integer idCategorie, List<Integer> idProduits){
+    public String addCategorieToProduits(Integer idCategorie, Integer[] idProduits){
         Categorie vCategorie = CategorieDto.toEntity(findById(idCategorie));
         for(Integer idProduit : idProduits){
             Produit vProduit = vProduitRepository.findById(idProduit).get();
             vProduit.getCategories().add(vCategorie);
         }
         return "Succès";
+    }
+
+    @Override
+    public String addProduitToCategorie(Integer idCategorie, Integer idProduit){
+        Categorie vCategorie = CategorieDto.toEntity(findById(idCategorie));
+        Produit vProduit = vProduitRepository.findById(idProduit).get();
+        vProduit.setIdBoutique(vCategorie.getIdBoutique());
+        vCategorie.getProduits().add(vProduit);
+        return "Produit ajouté avec succés pour la boutique " + vCategorie.getNom() + " !";
     }
 }

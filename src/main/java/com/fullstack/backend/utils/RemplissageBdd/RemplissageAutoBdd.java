@@ -92,9 +92,9 @@ public class RemplissageAutoBdd {
     private void FillingUpProduit(List<ProduitDto> listProduits, String nomBoutique, String nomCategorie){
         for(ProduitDto p:listProduits){
             vProduitService.create(p);
-            vCategorieService.addCategorieToProduits(
+            vCategorieService.addProduitToCategorie(
                     vCategorieService.findByNom(nomCategorie).getId(),
-                    Arrays.asList(vProduitService.findByNom(p.getNom()).getId())
+                    vProduitService.findByNom(p.getNom()).getId()
             );
             vBoutiqueService.addProduitToBoutique(
                     vBoutiqueService.findByNom(nomBoutique).getId(),

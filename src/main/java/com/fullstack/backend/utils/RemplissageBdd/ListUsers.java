@@ -10,6 +10,7 @@ import java.util.List;
 public interface ListUsers {
 
     public List<AppUserDto> LIST_ADMINS = Arrays.asList(
+            new AppUserDto(null, "admin", "admin", "admin@gmail.com", "1234", "urlPhotos", new ArrayList<>(), new ArrayList<>()),
             new AppUserDto(null, "Bob", "Smith", "bob.smith@gmail.com", "1234", "urlPhotos", new ArrayList<>(), new ArrayList<>()),
             new AppUserDto(null, "Doe", "John", "john.doe@gmail.com", "1234", "urlPhotos", new ArrayList<>(), new ArrayList<>())
     );

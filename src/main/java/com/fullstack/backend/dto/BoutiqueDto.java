@@ -28,6 +28,7 @@ public class BoutiqueDto {
     private Date creationData;
     private String horaire;
     private Boolean conge;
+    private Integer idUser;
     private Collection<Categorie> categories = new ArrayList<>();
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Collection<Produit> produits = new ArrayList<>();
@@ -45,6 +46,7 @@ public class BoutiqueDto {
                 .categories(boutique.getCategories())
                 .produits(boutique.getProduits())
                 .user(boutique.getUser())
+                .idUser(boutique.getIdUser())
                 .build();
     }
 
@@ -62,6 +64,7 @@ public class BoutiqueDto {
         vBoutique.setCategories(boutiqueDto.getCategories());
         vBoutique.setProduits(boutiqueDto.getProduits());
         vBoutique.setUser(boutiqueDto.getUser());
+        vBoutique.setIdUser(boutiqueDto.getIdUser());
         return vBoutique;
     }
 }

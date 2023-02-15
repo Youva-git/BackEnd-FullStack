@@ -110,6 +110,7 @@ public class BoutiqueServiceImpl implements BoutiqueService {
         Boutique vBoutique = BoutiqueDto.toEntity(findById(idBoutique));
         AppUser vUser = vUserRepository.findByEmail(emailUser).get();
         vBoutique.setUser(vUser.getPrenom()+" "+vUser.getNom());
+        vBoutique.setIdUser(vUser.getIdUser());
         vBoutiqueRepository.save(vBoutique);
         return "Utilisateur ajouté avec succés pour la boutique " + vBoutique.getNom() + " !";
     }
