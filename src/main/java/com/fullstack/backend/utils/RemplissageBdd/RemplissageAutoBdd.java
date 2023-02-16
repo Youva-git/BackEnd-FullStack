@@ -124,20 +124,19 @@ public class RemplissageAutoBdd {
         vAppUserService.addBoutiqueToUser("samantha.brown@gmail.com", 11);
 
         vBoutiqueService.addUserToBoutique("alice.bob@gmail.com", 1);
-        vBoutiqueService.addUserToBoutique("alice.bob@gmail.com", 3);
-        vBoutiqueService.addUserToBoutique("alice.bob@gmail.com", 4);
+
 
         vBoutiqueService.addUserToBoutique("david.lee@gmail.com", 2);
-        vBoutiqueService.addUserToBoutique("david.lee@gmail.com", 6);
-        vBoutiqueService.addUserToBoutique("david.lee@gmail.com", 8);
+        vBoutiqueService.addUserToBoutique("hannah.davis@gmail.com", 6);
+        vBoutiqueService.addUserToBoutique("adam.jones@gmail.com", 8);
 
         vBoutiqueService.addUserToBoutique("emily.smith@gmail.com", 5);
-        vBoutiqueService.addUserToBoutique("emily.smith@gmail.com", 7);
+        vBoutiqueService.addUserToBoutique("olivia.taylor@gmail.com", 7);
 
         vBoutiqueService.addUserToBoutique("michael.johnson@gmail.com", 9);
-        vBoutiqueService.addUserToBoutique("michael.johnson@gmail.com", 10);
+        vBoutiqueService.addUserToBoutique("william.wilson@gmail.com", 10);
 
         vBoutiqueService.addUserToBoutique("samantha.brown@gmail.com", 11);
-        vBoutiqueService.addUserToBoutique("samantha.brown@gmail.com", 12);
+        vBoutiqueService.addUserToBoutique("natalie.jones@gmail.com", 12);
     }
 }
