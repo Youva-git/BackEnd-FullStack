@@ -101,7 +101,11 @@ public class CategorieServiceImpl implements CategorieService {
         Categorie vCategorie = CategorieDto.toEntity(findById(idCategorie));
         for(Integer idProduit : idProduits){
             Produit vProduit = vProduitRepository.findById(idProduit).get();
-            vProduit.getCategories().add(vCategorie);
+            if(vProduitRepository.findByIdProduitAndCategoriesIdCategorie(idProduit, idCategorie) == null){
+                vProduit.getCategories().add(vCategorie);
+            } else {
+                log.warn("L'association existe déjà pour le produit "+ vProduit.getNom() +" !");
+            }
         }
         return "Succès";
     }

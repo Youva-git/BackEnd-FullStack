@@ -2,7 +2,7 @@ package com.fullstack.backend.controller;
 
 import com.fullstack.backend.dto.ProduitDto;
 import com.fullstack.backend.dto.AppUserDto;
-import com.fullstack.backend.modele.RoleUserFrom;
+import com.fullstack.backend.utils.modeleEndPoint.RoleUserFrom;
 import com.fullstack.backend.service.AppUserService;
 import io.swagger.annotations.*;
 import org.springframework.http.MediaType;

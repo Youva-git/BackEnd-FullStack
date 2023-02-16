@@ -13,7 +13,7 @@ public interface ListsProduits {
                     "4G 64GB Mobile Phone Black, SIM Card Not Included, Android Smartphone, FR Version",
                     "P0001", new Date(), 160.88, "https://farm66.staticflickr.com/65535/52604647633_bd5e6cd47a_z.jpg",1,null),
             new ProduitDto(null, "SAMSUNG GALAXY M13 5G", "Téléphone mobile 4G 64GB, Carte SIM non incluse, Android, Version FR, light bleu", "4G 64GB mobile phone, SIM card not included, Android, FR version, light blue",
-                    "P0002", new Date(), 360.88, "https://farm66.staticflickr.com/65535/52604142926_039442b6fe_z.jpg",1, null),
+                    "P0002", new Date(), 360.88, "https://farm66.staticflickr.com/65535/52604142926_039442b6fe_z.jpg",null, null),
             new ProduitDto(null, "Samsung Galaxy A33 5G SM-A336B", "Téléphone mobile 16,3 cm (6.4) Double SIM Hybride Android 12 USB Type-C 6 Go 128 Go 5000 mAh Noir", "Mobile phone 16.3 cm (6.4) Dual SIM Hybrid Android 12 USB Type-C 6 GB 128 GB 5000 mAh Black",
                     "P0003", new Date(), 260.88, "https://farm66.staticflickr.com/65535/52604396849_f613f3cb16_z.jpg",1, null),
             new ProduitDto(null, "Samsung Galaxy Z Fold3", "Téléphone mobile 5G 256Go Noir, Carte SIM non incluse, smartphone Android, Version FR", "5G 256GB Black Mobile Phone, SIM Card Not Included, Android Smartphone, FR Version",

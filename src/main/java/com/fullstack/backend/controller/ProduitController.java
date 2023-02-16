@@ -3,6 +3,7 @@ package com.fullstack.backend.controller;
 import com.fullstack.backend.dto.CategorieDto;
 import com.fullstack.backend.dto.ProduitDto;
 import com.fullstack.backend.service.ProduitService;
+import com.fullstack.backend.utils.modeleEndPoint.AssociationCategoriesProduit;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -103,7 +104,7 @@ public class ProduitController {
     })
     @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
     @PostMapping(ENDPOINT_ADD_CATEGORIES_PRODUIT)
-    public String addCategoriesToProduit(@RequestParam List<Integer> idCategories, @RequestParam Integer idProduit){
-        return vProduitService.addCategoriesToProduit(idCategories, idProduit);
+    public String addCategoriesToProduit(@RequestBody AssociationCategoriesProduit idCateoriesProduit){
+        return vProduitService.addCategoriesToProduit(idCateoriesProduit.getIdCategories(), idCateoriesProduit.getIdProduit());
     }
 }

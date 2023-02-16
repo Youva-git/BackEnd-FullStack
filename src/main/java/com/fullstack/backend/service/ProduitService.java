@@ -14,5 +14,5 @@ public interface ProduitService {
     ProduitDto findByNom(String nom);
     List<ProduitDto> findByIdBoutique(Integer idBoutique);
     List<ProduitDto> filterProduits(Integer idBoutique, Integer idCategorie);
-    String addCategoriesToProduit(List<Integer> idCategories, Integer idProduit);
+    String addCategoriesToProduit(Integer[] idCategories, Integer idProduit);
 }

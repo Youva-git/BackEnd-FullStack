@@ -134,13 +134,17 @@ public class ProduitServiceImpl implements ProduitService {
                 .collect(Collectors.toList());
     }
     @Override
-    public String addCategoriesToProduit(List<Integer> idCategories, Integer idProduit){
+    public String addCategoriesToProduit(Integer[] idCategories, Integer idProduit){
         Produit vProduit = vProduitRepository.findById(idProduit).get();
         for(Integer idCategorie : idCategories){
-            Categorie vCategorie = vCategorieRepository.findByIdCategorie(idCategorie);
-            vProduit.getCategories().add(vCategorie);
+            Categorie vCategorie = vCategorieRepository.findById(idCategorie).get();
+            if(vProduitRepository.findByIdProduitAndCategoriesIdCategorie(idProduit, idCategorie) == null){
+                vProduit.getCategories().add(vCategorie);
+                vProduitRepository.save(vProduit);
+            } else {
+                log.warn("L'association existe déjà pour la categorie "+ vCategorie.getNom() +" !");
+            }
         }
-        return "Succès.";
+        return "Succès";
     }
-
 }

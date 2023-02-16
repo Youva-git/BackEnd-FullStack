@@ -1,4 +1,4 @@
-package com.fullstack.backend.modele;
+package com.fullstack.backend.utils.modeleEndPoint;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

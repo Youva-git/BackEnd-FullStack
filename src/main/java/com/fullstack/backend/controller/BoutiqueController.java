@@ -4,6 +4,8 @@ import com.fullstack.backend.dto.BoutiqueDto;
 import com.fullstack.backend.dto.ProduitDto;
 import com.fullstack.backend.modele.Boutique;
 import com.fullstack.backend.service.BoutiqueService;
+import com.fullstack.backend.utils.modeleEndPoint.AssociationProduitBotique;
+import com.fullstack.backend.utils.modeleEndPoint.AssociationUserBotique;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -95,8 +97,8 @@ public class BoutiqueController {
 
     @PreAuthorize("hasAnyAuthority('ADMIN')")
     @PostMapping(ENDPOINT_ADD_USER_TO_BOUTIQUE)
-    public String addUserToBoutique(@RequestParam String emailUser, @RequestParam Integer idBoutique){
-        return vBoutiqueService.addUserToBoutique(emailUser, idBoutique);
+    public String addUserToBoutique(@RequestBody AssociationUserBotique idBoutiqueEmailUser){
+        return vBoutiqueService.addUserToBoutique(idBoutiqueEmailUser.getEmailUser(), idBoutiqueEmailUser.getIdBoutique());
     }
 
     @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
@@ -107,8 +109,8 @@ public class BoutiqueController {
 
     @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
     @PostMapping(value = ENDPOINT_ADD_PRODUIT_TO_BOUTIQUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public String addProduitToBoutique(@RequestParam Integer idBoutique, @RequestParam Integer idProduit){
-        return vBoutiqueService.addProduitToBoutique(idBoutique, idProduit);
+    public String addProduitToBoutique(@RequestBody AssociationProduitBotique idBoutiqueProduit){
+        return vBoutiqueService.addProduitToBoutique(idBoutiqueProduit.getIdBoutique(), idBoutiqueProduit.getIdProduit());
     }
 
 }
