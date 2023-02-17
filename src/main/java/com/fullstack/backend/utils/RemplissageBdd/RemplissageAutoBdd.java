@@ -117,13 +117,13 @@ public class RemplissageAutoBdd {
         AddBoutiquesToUsers();
     }
     private void AddBoutiquesToUsers(){
-        vAppUserService.addBoutiqueToUser("alice.bob@gmail.com", 1);
+        vAppUserService.addBoutiqueToUser("vendeur_livreur@gmail.com", 1);
         vAppUserService.addBoutiqueToUser("david.lee@gmail.com", 2);
         vAppUserService.addBoutiqueToUser("emily.smith@gmail.com", 5);
         vAppUserService.addBoutiqueToUser("michael.johnson@gmail.com", 9);
         vAppUserService.addBoutiqueToUser("samantha.brown@gmail.com", 11);
 
-        vBoutiqueService.addUserToBoutique("alice.bob@gmail.com", 1);
+        vBoutiqueService.addUserToBoutique("vendeur_livreur@gmail.com", 1);
 
 
         vBoutiqueService.addUserToBoutique("david.lee@gmail.com", 2);

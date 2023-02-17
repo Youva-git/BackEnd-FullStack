@@ -76,10 +76,6 @@ public class ProduitServiceImpl implements ProduitService {
     }
 
     public List<ProduitDto> findByIdBoutique(Integer idBoutique){
-        if(idBoutique == null){
-            log.error("Id boutique null !");
-            return null;
-        }
         return vProduitRepository.findByIdBoutique(idBoutique).stream()
                 .map(ProduitDto::fromEntity)
                 .collect(Collectors.toList());

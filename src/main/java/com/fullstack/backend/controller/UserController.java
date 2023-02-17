@@ -29,7 +29,7 @@ public class UserController {
             @ApiResponse(code = 200, message = "utilisateur ajouté avec succès."),
             @ApiResponse(code = 400, message = "utilisateur non valide.")
     })
-    @PostMapping(ENDPOINT_ADD_MANAGER)
+    @PostMapping(ENDPOINT_ADD_VENDEUR_LIVREUR)
     public AppUserDto addNewVendeur_Livreur(@RequestBody AppUserDto user){
         return vUserService.addNewVendeur_Livreur(user);
     }

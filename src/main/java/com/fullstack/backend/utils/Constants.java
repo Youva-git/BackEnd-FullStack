@@ -9,9 +9,8 @@ public interface Constants {
       public final String ENDPOINT_PRODUITS = APP_ROOT+"/produits";
       public final String ENDPOINT_ROLE = APP_ROOT+"/roles";
 
-      public final String ENDPOINT_ADD_USER = "/addNewUser";
       public final String ENDPOINT_ADD_ADMIN = "/addNewAdmin";
-      public final String ENDPOINT_ADD_MANAGER = "/addNewManager";
+      public final String ENDPOINT_ADD_VENDEUR_LIVREUR = "/addNewVendeurLivreur";
       public final String ENDPOINT_FIND_BY_ID = "/findById/{id}";
       public final String ENDPOINT_FIND_BY_NOM = "/findByNom/{nom}";
       public final String ENDPOINT_FIND_BY_EMAIL = "/findByMail/{email}";

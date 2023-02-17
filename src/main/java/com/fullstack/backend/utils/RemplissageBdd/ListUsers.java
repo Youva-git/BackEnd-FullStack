@@ -15,7 +15,7 @@ public interface ListUsers {
             new AppUserDto(null, "Doe", "John", "john.doe@gmail.com", "1234", "urlPhotos", new ArrayList<>(), new ArrayList<>())
     );
     public List<AppUserDto> LIST_VENDEUR_LIVREUR= Arrays.asList(
-            new AppUserDto(null, "Johnson", "Alice", "alice.bob@gmail.com", "1234", "urlPhotos", new ArrayList<>(), new ArrayList<>()),
+            new AppUserDto(null, "Johnson", "Alice", "vendeur_livreur@gmail.com", "1234", "urlPhotos", new ArrayList<>(), new ArrayList<>()),
             new AppUserDto(null, "Lee", "David", "david.lee@gmail.com", "1234", "urlPhotos", new ArrayList<>(), new ArrayList<>()),
             new AppUserDto(null, "Smith", "Emily", "emily.smith@gmail.com", "1234", "urlPhotos", new ArrayList<>(), new ArrayList<>()),
             new AppUserDto(null, "Johnson", "Michael", "michael.johnson@gmail.com", "1234", "urlPhotos", new ArrayList<>(), new ArrayList<>()),

@@ -87,6 +87,17 @@ public class ProduitController {
     ProduitDto findByCodeProduit(@PathVariable String codeProduit){
         return vProduitService.findByCodeProduit(codeProduit);
     }
+
+    @ApiOperation(value = "Rechercher un produit avec son CODE.", response = ProduitDto.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Produit trouvé dans la BDD."),
+            @ApiResponse(code = 404, message = "Aucun produit n'a été trouvé dans la BDD.")
+    })
+    @GetMapping(value = ENDPOINT_FIND_BY_ID_BOUTIQUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    List<ProduitDto> findByIdBoutique(@PathVariable Integer idBoutique){
+        return vProduitService.findByIdBoutique(idBoutique);
+    }
+
     @ApiOperation(value = "Rechercher un produit avec son NOM.", response = ProduitDto.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Produit trouvé dans la BDD."),
