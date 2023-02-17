@@ -20,6 +20,8 @@ public interface Constants {
       public final String ENDPOINT_ADD_NEW_ROLE = "/addNewRoles";
       public final String ENDPOINT_CHANGE_ROLE_TO_USER = "/changeRole";
       public final String ENDPOINT_PAGE_USER = "/pageUsers";
+      public final String ENDPOINT_PAGE_BOUTIQUE= "/pageBoutique";
+      public final String ENDPOINT_PAGE_PRODUIT = "/pageProduit";
       public final String ENDPOINT_PROFILE_USER= "/profile";
       public final String ENDPOINT_ADD_CATEGORIE_TO_BOUTIQUE = "/addCategorieToBoutique";
       public final String ENDPOINT_ADD_USER_TO_BOUTIQUE = "/addUserToBoutique";

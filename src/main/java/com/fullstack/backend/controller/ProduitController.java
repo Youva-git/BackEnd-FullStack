@@ -85,7 +85,7 @@ public class ProduitController {
             @ApiResponse(code = 200, message = "La liste des produits qui sont présente dans la BDD."),
     })
     @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
-    @GetMapping(ENDPOINT_PAGE_USER)
+    @GetMapping(ENDPOINT_PAGE_PRODUIT)
     public List<ProduitDto> pageProduit(@RequestParam(name="page", defaultValue = "0") int page,
                                           @RequestParam(name="size", defaultValue = "6") int size){
         return vProduitService.pageProduit(page, size);

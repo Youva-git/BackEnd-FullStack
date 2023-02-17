@@ -17,7 +17,7 @@ import static com.fullstack.backend.utils.RemplissageBdd.ListBoutiques.*;
 import static com.fullstack.backend.utils.RemplissageBdd.ListsCategories.*;
 import static com.fullstack.backend.utils.RemplissageBdd.ListsProduits.*;
 
-//@Configuration
+@Configuration
 public class RemplissageAutoBdd {
     private final AppUserService vAppUserService;
     private final BoutiqueService vBoutiqueService;
@@ -33,7 +33,7 @@ public class RemplissageAutoBdd {
         this.vProduitService = vProduitService;
         this.vRoleService = vRoleService;
     }
-    //@Bean
+    @Bean
     public void FillingUpBdd(){
         FillingUpBoutique();
         FillingUpCategories();

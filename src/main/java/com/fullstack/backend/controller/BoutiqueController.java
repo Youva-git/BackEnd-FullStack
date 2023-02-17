@@ -104,7 +104,7 @@ public class BoutiqueController {
             @ApiResponse(code = 200, message = "La liste des boutiques qui sont présente dans la BDD."),
     })
     @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
-    @GetMapping(ENDPOINT_PAGE_USER)
+    @GetMapping(ENDPOINT_PAGE_BOUTIQUE)
     public List<BoutiqueDto> pageBoutique(@RequestParam(name="page", defaultValue = "0") int page,
                                       @RequestParam(name="size", defaultValue = "6") int size){
         return vBoutiqueService.pageBoutique(page, size);
