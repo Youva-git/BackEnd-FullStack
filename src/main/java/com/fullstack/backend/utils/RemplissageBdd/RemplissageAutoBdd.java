@@ -17,7 +17,7 @@ import static com.fullstack.backend.utils.RemplissageBdd.ListBoutiques.*;
 import static com.fullstack.backend.utils.RemplissageBdd.ListsCategories.*;
 import static com.fullstack.backend.utils.RemplissageBdd.ListsProduits.*;
 
-@Configuration
+//@Configuration
 public class RemplissageAutoBdd {
     private final AppUserService vAppUserService;
     private final BoutiqueService vBoutiqueService;
@@ -33,7 +33,7 @@ public class RemplissageAutoBdd {
         this.vProduitService = vProduitService;
         this.vRoleService = vRoleService;
     }
-    @Bean
+    //@Bean
     public void FillingUpBdd(){
         FillingUpBoutique();
         FillingUpCategories();
@@ -54,7 +54,7 @@ public class RemplissageAutoBdd {
                 LIST_CATEGORIE_DIANA_BOUTIQUE, LIST_CATEGORIE_GLOBAL_INFORMATIQUE, LIST_CATEGORIE_ANDRO_FASHION
         );
         for(int i = 0; i < vListsCategories.size(); ++i){
-            FillingUpCategorie(vListsCategories.get(i), vListNomBoutiques.get(i));
+            FillingUpCategorie(vListsCategories.get(i));
         }
     }
     public void FillingUpProduits(){
@@ -82,21 +82,18 @@ public class RemplissageAutoBdd {
             FillingUpProduit(vListsProduits.get(i), vListNomBoutiquesPourProduit.get(i), vListsNomCategories.get(i));
         }
     }
-    private void FillingUpCategorie(List<CategorieDto> listCategories, String nomBoutique){
+    private void FillingUpCategorie(List<CategorieDto> listCategories){
         for(CategorieDto c:listCategories){
-            CategorieDto ct = vCategorieService.create(c);
-            vBoutiqueService.addCategorieToBoutique(
-                    vBoutiqueService.findByNom(nomBoutique).getId(),
-                    ct.getId()
-            );
+            vCategorieService.create(c);
         }
     }
     private void FillingUpProduit(List<ProduitDto> listProduits, String nomBoutique, String nomCategorie){
         for(ProduitDto p:listProduits){
             ProduitDto pr = vProduitService.create(p);
-            vCategorieService.addProduitToCategorie(
+            Integer[] idsProduits = new Integer[pr.getId()];
+            vCategorieService.addCategorieToProduits(
                     vCategorieService.findByNom(nomCategorie).getId(),
-                    pr.getId()
+                    idsProduits
             );
             vBoutiqueService.addProduitToBoutique(
                     vBoutiqueService.findByNom(nomBoutique).getId(),

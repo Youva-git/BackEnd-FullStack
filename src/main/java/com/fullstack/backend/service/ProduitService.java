@@ -1,5 +1,6 @@
 package com.fullstack.backend.service;
 
+import com.fullstack.backend.dto.BoutiqueDto;
 import com.fullstack.backend.dto.ProduitDto;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public interface ProduitService {
     String delete(Integer id);
     ProduitDto findByNom(String nom);
     List<ProduitDto> findByIdBoutique(Integer idBoutique);
+    List<ProduitDto> pageProduit(int page, int size);
     List<ProduitDto> filterProduits(Integer idBoutique, Integer idCategorie);
     String addCategoriesToProduit(Integer[] idCategories, Integer idProduit);
 }

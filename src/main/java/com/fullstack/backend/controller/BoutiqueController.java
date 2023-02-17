@@ -1,5 +1,6 @@
 package com.fullstack.backend.controller;
 
+import com.fullstack.backend.dto.AppUserDto;
 import com.fullstack.backend.dto.BoutiqueDto;
 import com.fullstack.backend.dto.ProduitDto;
 import com.fullstack.backend.modele.Boutique;
@@ -75,6 +76,40 @@ public class BoutiqueController {
         return vBoutiqueService.delete(id);
     }
 
+    @ApiOperation(value = "Associer un produit à une seule boutique.", response = String.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Produit associer à la boutique avec succés."),
+            @ApiResponse(code = 404, message = "Le produit ne peut pas etre associer à la boutique !.")
+    })
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
+    @PostMapping(value = ENDPOINT_ADD_PRODUIT_TO_BOUTIQUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public String addProduitToBoutique(@RequestBody AssociationProduitBotique idBoutiqueProduit){
+        return vBoutiqueService.addProduitToBoutique(idBoutiqueProduit.getIdBoutique(), idBoutiqueProduit.getIdProduit());
+    }
+
+    @ApiOperation(value = "Associer un utilisateur à une seule boutique.", response = String.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Utilisateur associer à la boutique avec succés."),
+            @ApiResponse(code = 404, message = "L'utilisateur ne peut pas etre associer à la boutique !.")
+    })
+    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    @PostMapping(ENDPOINT_ADD_USER_TO_BOUTIQUE)
+    public String addUserToBoutique(@RequestBody AssociationUserBotique idBoutiqueEmailUser){
+        return vBoutiqueService.addUserToBoutique(idBoutiqueEmailUser.getEmailUser(), idBoutiqueEmailUser.getIdBoutique());
+    }
+
+    @ApiOperation(value = "Effectuer une recherche paginé sur toutes les boutiques qui sont présente.",
+            response = BoutiqueDto.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "La liste des boutiques qui sont présente dans la BDD."),
+    })
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
+    @GetMapping(ENDPOINT_PAGE_USER)
+    public List<BoutiqueDto> pageBoutique(@RequestParam(name="page", defaultValue = "0") int page,
+                                      @RequestParam(name="size", defaultValue = "6") int size){
+        return vBoutiqueService.pageBoutique(page, size);
+    }
+
     @ApiOperation(value = "Rechercher un boutique avec son ID.", response = BoutiqueDto.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Boutique trouvée dans la BDD."),
@@ -93,24 +128,6 @@ public class BoutiqueController {
     @GetMapping(value = ENDPOINT_FIND_BY_NOM, produces = MediaType.APPLICATION_JSON_VALUE)
     BoutiqueDto findByNom(@PathVariable String nom){
         return vBoutiqueService.findByNom(nom);
-    }
-
-    @PreAuthorize("hasAnyAuthority('ADMIN')")
-    @PostMapping(ENDPOINT_ADD_USER_TO_BOUTIQUE)
-    public String addUserToBoutique(@RequestBody AssociationUserBotique idBoutiqueEmailUser){
-        return vBoutiqueService.addUserToBoutique(idBoutiqueEmailUser.getEmailUser(), idBoutiqueEmailUser.getIdBoutique());
-    }
-
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
-    @PostMapping(ENDPOINT_ADD_CATEGORIE_TO_BOUTIQUE)
-    public String addCategorieToBoutique(@RequestParam Integer idBoutique, @RequestParam Integer idCategorie){
-        return vBoutiqueService.addCategorieToBoutique(idBoutique, idCategorie);
-    }
-
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
-    @PostMapping(value = ENDPOINT_ADD_PRODUIT_TO_BOUTIQUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public String addProduitToBoutique(@RequestBody AssociationProduitBotique idBoutiqueProduit){
-        return vBoutiqueService.addProduitToBoutique(idBoutiqueProduit.getIdBoutique(), idBoutiqueProduit.getIdProduit());
     }
 
 }

@@ -13,5 +13,4 @@ public interface CategorieService {
     String delete(Integer id);
     String addCategorieToProduits(Integer idCategorie, Integer[] idProduits);
     List<CategorieDto> findByIdBoutique(Integer idBoutique);
-    String addProduitToCategorie(Integer idCategorie, Integer idProduit);
 }

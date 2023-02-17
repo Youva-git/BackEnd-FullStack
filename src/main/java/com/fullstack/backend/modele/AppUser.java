@@ -23,14 +23,14 @@ public class AppUser {
     private String mdp;
     @Column(name = "urlPhoto")
     private String urlPhoto;
-    @ManyToMany
+    @OneToOne
     @JoinTable( name = "Users_Roles_Associations",
             joinColumns = @JoinColumn( name = "idUser" ),
             inverseJoinColumns = @JoinColumn( name = "idRole" ) )
-    private Collection<AppRole> appRoles = new ArrayList<>();
-    @ManyToMany
+    private AppRole appRoles;
+    @OneToOne
     @JoinTable( name = "Users_boutique_Associations",
             joinColumns = @JoinColumn( name = "idUser" ),
             inverseJoinColumns = @JoinColumn( name = "idboutique" ) )
-    private Collection<Boutique> boutiques = new ArrayList<>();
+    private Boutique boutiques;
 }

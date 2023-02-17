@@ -66,6 +66,17 @@ public class CategorieController {
     }
 
 
+    @ApiOperation(value = "Associer une catégorie à un ou plusieurs produits.", response = String.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Succès."),
+            @ApiResponse(code = 404, message = "Erreur.")
+    })
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
+    @PostMapping(ENDPOINT_ADD_CATEGORIE_PRODUITS)
+    public String addCategorieToProduits(@RequestBody AssociationCategorieProduits IdCategoriesProduit){
+        return vCategorieService.addCategorieToProduits(IdCategoriesProduit.getIdCategorie(), IdCategoriesProduit.getIdProduits());
+    }
+
     @ApiOperation(value = "Rechercher une categorie avec son ID.", response = CategorieDto.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Categorie trouvée dans la BDD."),
@@ -96,14 +107,4 @@ public class CategorieController {
         return vCategorieService.findByIdBoutique(idBoutique);
     }
 
-    @ApiOperation(value = "Associer une catégorie à un produit.", response = CategorieDto.class)
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Succès."),
-            @ApiResponse(code = 404, message = "Erreur.")
-    })
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
-    @PostMapping(ENDPOINT_ADD_CATEGORIE_PRODUITS)
-    public String addCategorieToProduits(@RequestBody AssociationCategorieProduits IdCategoriesProduit){
-        return vCategorieService.addCategorieToProduits(IdCategoriesProduit.getIdCategorie(), IdCategoriesProduit.getIdProduits());
-    }
 }

@@ -109,13 +109,4 @@ public class CategorieServiceImpl implements CategorieService {
         }
         return "Succès";
     }
-
-    @Override
-    public String addProduitToCategorie(Integer idCategorie, Integer idProduit){
-        Categorie vCategorie = CategorieDto.toEntity(findById(idCategorie));
-        Produit vProduit = vProduitRepository.findById(idProduit).get();
-        vProduit.setIdBoutique(vCategorie.getIdBoutique());
-        vCategorie.getProduits().add(vProduit);
-        return "Produit ajouté avec succés pour la boutique " + vCategorie.getNom() + " !";
-    }
 }

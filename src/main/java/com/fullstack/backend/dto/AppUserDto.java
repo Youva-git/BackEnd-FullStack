@@ -22,8 +22,8 @@ public class AppUserDto {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String mdp;
     private String urlPhoto;
-    private Collection<AppRole> appRoles = new ArrayList<>();
-    private Collection<Boutique> boutiques = new ArrayList<>();
+    private AppRole appRoles;
+    private Boutique boutiques;
 
     public static AppUserDto fromEntity(AppUser user){
         if(user == null){

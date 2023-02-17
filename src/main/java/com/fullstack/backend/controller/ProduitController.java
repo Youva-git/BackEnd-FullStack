@@ -1,5 +1,6 @@
 package com.fullstack.backend.controller;
 
+import com.fullstack.backend.dto.BoutiqueDto;
 import com.fullstack.backend.dto.CategorieDto;
 import com.fullstack.backend.dto.ProduitDto;
 import com.fullstack.backend.service.ProduitService;
@@ -67,6 +68,28 @@ public class ProduitController {
         return vProduitService.delete(id);
     }
 
+    @ApiOperation(value = "Associer une ou plusieurs catégories à un produit.", response = CategorieDto.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Succès."),
+            @ApiResponse(code = 404, message = "Erreur.")
+    })
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
+    @PostMapping(ENDPOINT_ADD_CATEGORIES_PRODUIT)
+    public String addCategoriesToProduit(@RequestBody AssociationCategoriesProduit idCateoriesProduit){
+        return vProduitService.addCategoriesToProduit(idCateoriesProduit.getIdCategories(), idCateoriesProduit.getIdProduit());
+    }
+
+    @ApiOperation(value = "Effectuer une recherche paginé sur l’ensemble des produits appartenant à une boutique.",
+            response = BoutiqueDto.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "La liste des produits qui sont présente dans la BDD."),
+    })
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
+    @GetMapping(ENDPOINT_PAGE_USER)
+    public List<ProduitDto> pageProduit(@RequestParam(name="page", defaultValue = "0") int page,
+                                          @RequestParam(name="size", defaultValue = "6") int size){
+        return vProduitService.pageProduit(page, size);
+    }
 
     @ApiOperation(value = "Rechercher un produit avec son ID.", response = ProduitDto.class)
     @ApiResponses(value = {
@@ -95,16 +118,5 @@ public class ProduitController {
     @GetMapping(value = ENDPOINT_FIND_BY_NOM, produces = MediaType.APPLICATION_JSON_VALUE)
     public ProduitDto findByNom(@PathVariable String nom){
         return vProduitService.findByCodeProduit(nom);
-    }
-
-    @ApiOperation(value = "Associer une ou plusieurs catégories à un produit.", response = CategorieDto.class)
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Succès."),
-            @ApiResponse(code = 404, message = "Erreur.")
-    })
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
-    @PostMapping(ENDPOINT_ADD_CATEGORIES_PRODUIT)
-    public String addCategoriesToProduit(@RequestBody AssociationCategoriesProduit idCateoriesProduit){
-        return vProduitService.addCategoriesToProduit(idCateoriesProduit.getIdCategories(), idCateoriesProduit.getIdProduit());
     }
 }

@@ -1,5 +1,6 @@
 package com.fullstack.backend.service.impls;
 
+import com.fullstack.backend.dto.BoutiqueDto;
 import com.fullstack.backend.dto.CategorieDto;
 import com.fullstack.backend.dto.ProduitDto;
 import com.fullstack.backend.exception.EntityNotFoundException;
@@ -12,6 +13,7 @@ import com.fullstack.backend.repository.ProduitRepository;
 import com.fullstack.backend.service.ProduitService;
 import com.fullstack.backend.validator.ProduitValidator;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -146,5 +148,12 @@ public class ProduitServiceImpl implements ProduitService {
             }
         }
         return "Succès";
+    }
+
+    @Override
+    public List<ProduitDto> pageProduit(int page, int size){
+        return vProduitRepository.findAll(PageRequest.of(page, size)).getContent().stream()
+                .map(ProduitDto::fromEntity)
+                .collect(Collectors.toList());
     }
 }

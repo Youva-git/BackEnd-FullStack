@@ -20,9 +20,4 @@ public class Categorie extends AbstractEntity{
     private Integer idCategorie;
     @Column(name = "idBoutique")
     private Integer idBoutique;
-    @ManyToMany
-    @JoinTable( name = "Categorie_Produit_Associations",
-            joinColumns = @JoinColumn( name = "idCategorie" ),
-            inverseJoinColumns = @JoinColumn( name = "idProduit" ) )
-    private Collection<Produit> produits = new ArrayList<>();
 }

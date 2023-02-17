@@ -29,7 +29,7 @@ public class AppUserDetailsService implements UserDetailsService {
         try{
             AppUserDto vUser = AppUserDto.fromEntity(vUserRepository.findByEmail(email).get());
             List<SimpleGrantedAuthority> vAuthorityList = new ArrayList<>();
-            vUser.getAppRoles().forEach(role -> vAuthorityList.add(new SimpleGrantedAuthority(role.getRoleName())));
+            vAuthorityList.add(new SimpleGrantedAuthority(vUser.getAppRoles().getRoleName()));
             return new User(vUser.getEmail(), vUser.getMdp(), vAuthorityList);
         } catch (Exception e) {
             log.warn("Aucun utilisateur n'a été trouvé !");

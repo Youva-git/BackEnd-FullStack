@@ -29,7 +29,6 @@ public class BoutiqueDto {
     private String horaire;
     private Boolean conge;
     private Integer idUser;
-    private Collection<Categorie> categories = new ArrayList<>();
     private Collection<Produit> produits = new ArrayList<>();
     public static BoutiqueDto fromEntity(Boutique boutique){
         if(boutique == null){
@@ -42,7 +41,6 @@ public class BoutiqueDto {
                 .creationData(boutique.getCreationData())
                 .horaire(boutique.getHoraire())
                 .conge(boutique.getConge())
-                .categories(boutique.getCategories())
                 .produits(boutique.getProduits())
                 .user(boutique.getUser())
                 .idUser(boutique.getIdUser())
@@ -60,7 +58,6 @@ public class BoutiqueDto {
         vBoutique.setCreationData(boutiqueDto.getCreationData());
         vBoutique.setHoraire(boutiqueDto.getHoraire());
         vBoutique.setConge(boutiqueDto.getConge());
-        vBoutique.setCategories(boutiqueDto.getCategories());
         vBoutique.setProduits(boutiqueDto.getProduits());
         vBoutique.setUser(boutiqueDto.getUser());
         vBoutique.setIdUser(boutiqueDto.getIdUser());

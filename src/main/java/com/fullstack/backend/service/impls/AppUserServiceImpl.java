@@ -139,7 +139,7 @@ public class AppUserServiceImpl implements AppUserService {
             log.warn("Role introuvable !");
             throw new EntityNotFoundException("Role introuvable !", ErrorCodes.ROLE_NOT_FOUND);
         }
-        vAppUser.getAppRoles().add(vAppRole);
+        vAppUser.setAppRoles(vAppRole);
         return "Role ajouter avec succés !";
     }
     @Override
@@ -150,9 +150,7 @@ public class AppUserServiceImpl implements AppUserService {
             log.warn("Role introuvable !");
             throw new EntityNotFoundException("Role introuvable !", ErrorCodes.ROLE_NOT_FOUND);
         }
-        Collection<AppRole> appRoles = new ArrayList<>();
-        appRoles.add(vAppRole);
-        vAppUser.setAppRoles(appRoles);
+        vAppUser.setAppRoles(vAppRole);
         vUserRepository.save(vAppUser);
         return "Role mis à jour avec succés !";
     }
@@ -161,7 +159,7 @@ public class AppUserServiceImpl implements AppUserService {
     public String addBoutiqueToUser(String email, Integer idBoutique){
         AppUser vAppUser = AppUserDto.toEntity(findByEmail(email));
         Boutique vBoutique = vBoutiqueRepository.findById(idBoutique).get();
-        vAppUser.getBoutiques().add(vBoutique);
+        vAppUser.setBoutiques(vBoutique);
         return "Boutique ajouter avec succés pour l'utilisateur " + vAppUser.getNom() + " !";
     }
 

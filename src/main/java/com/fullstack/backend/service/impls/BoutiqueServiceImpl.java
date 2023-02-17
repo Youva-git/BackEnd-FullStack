@@ -1,5 +1,6 @@
 package com.fullstack.backend.service.impls;
 
+import com.fullstack.backend.dto.AppUserDto;
 import com.fullstack.backend.dto.BoutiqueDto;
 import com.fullstack.backend.exception.EntityNotFoundException;
 import com.fullstack.backend.exception.ErrorCodes;
@@ -15,6 +16,7 @@ import com.fullstack.backend.repository.ProduitRepository;
 import com.fullstack.backend.service.BoutiqueService;
 import com.fullstack.backend.validator.BoutiqueValidator;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -32,15 +34,12 @@ import java.util.stream.Collectors;
 public class BoutiqueServiceImpl implements BoutiqueService {
 
     private final BoutiqueRepository vBoutiqueRepository;
-    private final CategorieRepository vCategorieRepository;
     private final ProduitRepository vProduitRepository;
-
     private final AppUserRepository vUserRepository;
 
-    public BoutiqueServiceImpl(BoutiqueRepository vBoutiqueRepository, CategorieRepository vCategorieRepository,
+    public BoutiqueServiceImpl(BoutiqueRepository vBoutiqueRepository,
                                ProduitRepository vProduitRepository, AppUserRepository vUserRepository) {
         this.vBoutiqueRepository = vBoutiqueRepository;
-        this.vCategorieRepository = vCategorieRepository;
         this.vProduitRepository = vProduitRepository;
         this.vUserRepository = vUserRepository;
     }
@@ -116,21 +115,19 @@ public class BoutiqueServiceImpl implements BoutiqueService {
     }
 
     @Override
-    public String addCategorieToBoutique(Integer idBoutique, Integer idCategorie){
-        Boutique vBoutique = BoutiqueDto.toEntity(findById(idBoutique));
-        Categorie vCategorie = vCategorieRepository.findById(idCategorie).get();
-        vCategorie.setIdBoutique(vBoutique.getIdBoutique());
-        vBoutique.getCategories().add(vCategorie);
-        return "Categorie ajoutée avec succés pour la boutique " + vBoutique.getNom() + " !";
-    }
-
-    @Override
     public String addProduitToBoutique(Integer idBoutique, Integer idProduit){
         Boutique vBoutique = BoutiqueDto.toEntity(findById(idBoutique));
         Produit vProduit = vProduitRepository.findById(idProduit).get();
         vProduit.setIdBoutique(vBoutique.getIdBoutique());
         vBoutique.getProduits().add(vProduit);
         return "Produit ajouté avec succés pour la boutique " + vBoutique.getNom() + " !";
+    }
+
+    @Override
+    public List<BoutiqueDto> pageBoutique(int page, int size){
+        return vBoutiqueRepository.findAll(PageRequest.of(page, size)).getContent().stream()
+                .map(BoutiqueDto::fromEntity)
+                .collect(Collectors.toList());
     }
 
     @Override

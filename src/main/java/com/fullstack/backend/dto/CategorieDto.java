@@ -22,7 +22,6 @@ public class CategorieDto {
     private String description;
     private Date creationData;
     private String codeCategorie;
-    private Collection<Produit> produits = new ArrayList<>();
     private Integer idBoutique;
 
 
@@ -36,7 +35,6 @@ public class CategorieDto {
                 .description(categorie.getDescription())
                 .creationData(categorie.getCreationData())
                 .idBoutique(categorie.getIdBoutique())
-                .produits(categorie.getProduits())
                 .build();
     }
 
@@ -50,7 +48,6 @@ public class CategorieDto {
         vCategorie.setDescription(categorieDto.getDescription());
         vCategorie.setCreationData(categorieDto.getCreationData());
         vCategorie.setIdBoutique(categorieDto.getIdBoutique());
-        vCategorie.setProduits(categorieDto.getProduits());
         return vCategorie;
     }
 }

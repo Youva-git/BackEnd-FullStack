@@ -1,5 +1,6 @@
 package com.fullstack.backend.service;
 
+import com.fullstack.backend.dto.AppUserDto;
 import com.fullstack.backend.dto.BoutiqueDto;
 import com.fullstack.backend.modele.Boutique;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +17,7 @@ public interface BoutiqueService {
     BoutiqueDto update(Integer id, BoutiqueDto boutique);
     String delete(Integer id);
     String addUserToBoutique(String emailUser, Integer idBoutique);
-    String addCategorieToBoutique(Integer idBoutique, Integer idCategorie);
+    List<BoutiqueDto> pageBoutique(int page, int size);
     String addProduitToBoutique(Integer idBoutique, Integer idProduit);
     List<Boutique> filterBoutiques(String sort, String conge, String dateAfter, String dateBefore) throws ParseException;
 }

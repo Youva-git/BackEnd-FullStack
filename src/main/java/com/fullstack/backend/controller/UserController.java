@@ -2,6 +2,7 @@ package com.fullstack.backend.controller;
 
 import com.fullstack.backend.dto.ProduitDto;
 import com.fullstack.backend.dto.AppUserDto;
+import com.fullstack.backend.utils.modeleEndPoint.AssociationUserBotique;
 import com.fullstack.backend.utils.modeleEndPoint.RoleUserFrom;
 import com.fullstack.backend.service.AppUserService;
 import io.swagger.annotations.*;
@@ -73,6 +74,50 @@ public class UserController {
     @DeleteMapping("/{id}")
     public String delete(@PathVariable Integer id){return vUserService.delete(id);}
 
+    @ApiOperation(value = "Consulter le profile de l'utilisateur courant.", response = ProduitDto.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Profile Utilisateur."),
+            @ApiResponse(code = 404, message = "Profile Indisponible.")
+    })
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
+    @GetMapping(ENDPOINT_PROFILE_USER)
+    public AppUserDto profileUser(Principal principal){
+        return vUserService.findByEmail(principal.getName());
+    }
+
+    @ApiOperation(value = "Ajouter un role a un utilisateur.", response = ProduitDto.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Role ajouté avec succés."),
+            @ApiResponse(code = 404, message = "Aucun utilisateur/role n'a été trouvé dans la BDD.")
+    })
+    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    @PostMapping(ENDPOINT_CHANGE_ROLE_TO_USER)
+    public String changeRole(@RequestBody RoleUserFrom roleUserFrom){
+        return vUserService.changeRole(roleUserFrom.getEmail(), roleUserFrom.getRoleName());
+    }
+
+    @ApiOperation(value = "Associer une boutique à un seule utilisateur.", response = String.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Boutique associer à l'utilisateur avec succés."),
+            @ApiResponse(code = 404, message = "La boutique ne peut pas etre associer à l'utilisateur !.")
+    })
+    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    @PostMapping(ENDPOINT_ADD_USER_TO_BOUTIQUE)
+    public String addBoutiqueToUser(@RequestBody AssociationUserBotique idBoutiqueEmailUser){
+        return vUserService.addBoutiqueToUser(idBoutiqueEmailUser.getEmailUser(), idBoutiqueEmailUser.getIdBoutique());
+    }
+
+    @ApiOperation(value = "Afficher tous les utilisateurs de la BDD avec pagination.", response = ProduitDto.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "La liste des utilisateurs (Peut étre vide)."),
+    })
+    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    @GetMapping(ENDPOINT_PAGE_USER)
+    public List<AppUserDto> pageUsers(@RequestParam(name="page", defaultValue = "0") int page,
+                                       @RequestParam(name="size", defaultValue = "6") int size){
+        return vUserService.pageUsers(page, size);
+    }
+
     @ApiOperation(value = "Rechercher un utilisateur avec son MAIL.", response = ProduitDto.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "utilisateur trouvé dans la BDD."),
@@ -94,39 +139,6 @@ public class UserController {
     @GetMapping(value = ENDPOINT_FIND_BY_ID, produces = MediaType.APPLICATION_JSON_VALUE)
     AppUserDto findById(@PathVariable Integer id){
         return vUserService.findById(id);
-    }
-
-    @ApiOperation(value = "Ajouter un role a un utilisateur.", response = ProduitDto.class)
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Role ajouté avec succés."),
-            @ApiResponse(code = 404, message = "Aucun utilisateur/role n'a été trouvé dans la BDD.")
-    })
-    @PreAuthorize("hasAnyAuthority('ADMIN')")
-    @PostMapping(ENDPOINT_CHANGE_ROLE_TO_USER)
-    public String changeRole(@RequestBody RoleUserFrom roleUserFrom){
-        return vUserService.changeRole(roleUserFrom.getEmail(), roleUserFrom.getRoleName());
-    }
-
-    @ApiOperation(value = "Afficher tous les utilisateurs de la BDD avec pagination.", response = ProduitDto.class)
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "La liste des utilisateurs (Peut étre vide)."),
-    })
-    @PreAuthorize("hasAnyAuthority('ADMIN')")
-    @GetMapping(ENDPOINT_PAGE_USER)
-    public List<AppUserDto> pageUsers(@RequestParam(name="page", defaultValue = "0") int page,
-                                       @RequestParam(name="size", defaultValue = "6") int size){
-        return vUserService.pageUsers(page, size);
-    }
-
-    @ApiOperation(value = "Consulter le profile de l'utilisateur courant.", response = ProduitDto.class)
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Profile Utilisateur."),
-            @ApiResponse(code = 404, message = "Profile Indisponible.")
-    })
-    @PreAuthorize("hasAnyAuthority('ADMIN', 'VENDEUR_LIVREUR')")
-    @GetMapping(ENDPOINT_PROFILE_USER)
-    public AppUserDto profileUser(Principal principal){
-        return vUserService.findByEmail(principal.getName());
     }
 
 }
