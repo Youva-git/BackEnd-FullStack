@@ -200,6 +200,42 @@ phpmyadmin|schema||phpmyadmin|localhost|SELECT|G
 phpmyadmin|schema||phpmyadmin|localhost|SHOW VIEW|G
 phpmyadmin|schema||phpmyadmin|localhost|TRIGGER|G
 phpmyadmin|schema||phpmyadmin|localhost|UPDATE|G
+sonarqube|schema||sonar|localhost|ALTER|G
+sonarqube|schema||sonarqubeuser|localhost|ALTER|G
+sonarqube|schema||sonar|localhost|ALTER ROUTINE|G
+sonarqube|schema||sonarqubeuser|localhost|ALTER ROUTINE|G
+sonarqube|schema||sonar|localhost|CREATE|G
+sonarqube|schema||sonarqubeuser|localhost|CREATE|G
+sonarqube|schema||sonar|localhost|CREATE ROUTINE|G
+sonarqube|schema||sonarqubeuser|localhost|CREATE ROUTINE|G
+sonarqube|schema||sonar|localhost|CREATE TEMPORARY TABLES|G
+sonarqube|schema||sonarqubeuser|localhost|CREATE TEMPORARY TABLES|G
+sonarqube|schema||sonar|localhost|CREATE VIEW|G
+sonarqube|schema||sonarqubeuser|localhost|CREATE VIEW|G
+sonarqube|schema||sonar|localhost|DELETE|G
+sonarqube|schema||sonarqubeuser|localhost|DELETE|G
+sonarqube|schema||sonar|localhost|DROP|G
+sonarqube|schema||sonarqubeuser|localhost|DROP|G
+sonarqube|schema||sonar|localhost|EVENT|G
+sonarqube|schema||sonarqubeuser|localhost|EVENT|G
+sonarqube|schema||sonar|localhost|EXECUTE|G
+sonarqube|schema||sonarqubeuser|localhost|EXECUTE|G
+sonarqube|schema||sonar|localhost|INDEX|G
+sonarqube|schema||sonarqubeuser|localhost|INDEX|G
+sonarqube|schema||sonar|localhost|INSERT|G
+sonarqube|schema||sonarqubeuser|localhost|INSERT|G
+sonarqube|schema||sonar|localhost|LOCK TABLES|G
+sonarqube|schema||sonarqubeuser|localhost|LOCK TABLES|G
+sonarqube|schema||sonar|localhost|REFERENCES|G
+sonarqube|schema||sonarqubeuser|localhost|REFERENCES|G
+sonarqube|schema||sonar|localhost|SELECT|G
+sonarqube|schema||sonarqubeuser|localhost|SELECT|G
+sonarqube|schema||sonar|localhost|SHOW VIEW|G
+sonarqube|schema||sonarqubeuser|localhost|SHOW VIEW|G
+sonarqube|schema||sonar|localhost|TRIGGER|G
+sonarqube|schema||sonarqubeuser|localhost|TRIGGER|G
+sonarqube|schema||sonar|localhost|UPDATE|G
+sonarqube|schema||sonarqubeuser|localhost|UPDATE|G
 sys|schema||mysql.sys|localhost|TRIGGER|G
 testprojetlw1|schema||admin1|localhost|ALTER|G
 testprojetlw1|schema||admin2|localhost|ALTER|G
@@ -239,7 +275,7 @@ testprojetlw1|schema||admin1|localhost|UPDATE|G
 testprojetlw1|schema||admin2|localhost|UPDATE|G
 testprojetlw1|schema||admin1|localhost|grant option|G
 testprojetlw1|schema||admin2|localhost|grant option|G</Grants>
-      <ServerVersion>8.0.31</ServerVersion>
+      <ServerVersion>8.0.32</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
@@ -1188,7 +1224,13 @@ testprojetlw1|schema||admin2|localhost|grant option|G</Grants>
     <schema id="302" parent="1" name="usersPf">
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
-    <user id="303" parent="1" name="admin1">
+    <schema id="303" parent="1" name="Jee">
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </schema>
+    <schema id="304" parent="1" name="sonarqube">
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </schema>
+    <user id="305" parent="1" name="admin1">
       <Host>localhost</Host>
       <MaxConnections>48</MaxConnections>
       <MaxQuestions>48</MaxQuestions>
@@ -1199,37 +1241,416 @@ testprojetlw1|schema||admin2|localhost|grant option|G</Grants>
       <X509Issuer>mysql</X509Issuer>
       <X509Subject>mysql</X509Subject>
     </user>
-    <user id="304" parent="1" name="admin2">
+    <user id="306" parent="1" name="admin2">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
       <SslCipher>mysql</SslCipher>
       <X509Issuer>mysql</X509Issuer>
       <X509Subject>mysql</X509Subject>
     </user>
-    <user id="305" parent="1" name="debian-sys-maint">
+    <user id="307" parent="1" name="debian-sys-maint">
       <Host>localhost</Host>
     </user>
-    <user id="306" parent="1" name="mysql.infoschema">
+    <user id="308" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="307" parent="1" name="mysql.session">
+    <user id="309" parent="1" name="mysql.session">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
     </user>
-    <user id="308" parent="1" name="mysql.sys">
+    <user id="310" parent="1" name="mysql.sys">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
     </user>
-    <user id="309" parent="1" name="phpmyadmin">
+    <user id="311" parent="1" name="phpmyadmin">
       <Host>localhost</Host>
     </user>
-    <user id="310" parent="1" name="projetLw1M1">
+    <user id="312" parent="1" name="projetLw1M1">
       <Host>localhost</Host>
     </user>
-    <user id="311" parent="1" name="root">
+    <user id="313" parent="1" name="root">
       <Host>localhost</Host>
     </user>
+    <user id="314" parent="1" name="sonar">
+      <Host>localhost</Host>
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <user id="315" parent="1" name="sonarqubeuser">
+      <Host>localhost</Host>
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <table id="316" parent="288" name="app_role">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="317" parent="288" name="app_user">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="318" parent="288" name="boutique">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="319" parent="288" name="boutique_categorie_associations">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="320" parent="288" name="boutique_produit_associations">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="321" parent="288" name="categorie">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="322" parent="288" name="categorie_produit_associations">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="323" parent="288" name="hibernate_sequence">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="324" parent="288" name="produit">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="325" parent="288" name="produit_categorie_associations">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="326" parent="288" name="users_boutique_associations">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="327" parent="288" name="users_roles_associations">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <column id="328" parent="316" name="id_role">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="329" parent="316" name="role_name">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <index id="330" parent="316" name="PRIMARY">
+      <ColNames>id_role</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="331" parent="316" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="332" parent="317" name="id">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="333" parent="317" name="email">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="334" parent="317" name="mdp">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="335" parent="317" name="nom">
+      <DasType>varchar(32)|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="336" parent="317" name="prenom">
+      <DasType>varchar(32)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="337" parent="317" name="url_photo">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <index id="338" parent="317" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="339" parent="317" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="340" parent="318" name="id">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="341" parent="318" name="creation_data">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="342" parent="318" name="description">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="343" parent="318" name="last_modified_data">
+      <DasType>datetime|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="344" parent="318" name="nom">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="345" parent="318" name="url_photo">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="346" parent="318" name="conge">
+      <DasType>bit(1)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="347" parent="318" name="horaire">
+      <DasType>text|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <column id="348" parent="318" name="id_user">
+      <DasType>int|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <column id="349" parent="318" name="user">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>10</Position>
+    </column>
+    <index id="350" parent="318" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="351" parent="318" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="352" parent="319" name="id_boutique">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="353" parent="319" name="id_categorie">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="354" parent="319" name="UK_go04y0bg7rwq790c98kebg076">
+      <ColNames>id_categorie</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="355" parent="319" name="FKmm5fcm716hpfsk1w7is3udvl6">
+      <ColNames>id_boutique</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="356" parent="319" name="UK_go04y0bg7rwq790c98kebg076">
+      <UnderlyingIndexName>UK_go04y0bg7rwq790c98kebg076</UnderlyingIndexName>
+    </key>
+    <column id="357" parent="320" name="id_boutique">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="358" parent="320" name="id_produit">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="359" parent="320" name="UK_9l8brx9t96gqors8qrir2rg1p">
+      <ColNames>id_produit</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="360" parent="320" name="FKndhgylcowjvc4dyp83pog51x1">
+      <ColNames>id_boutique</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="361" parent="320" name="UK_9l8brx9t96gqors8qrir2rg1p">
+      <UnderlyingIndexName>UK_9l8brx9t96gqors8qrir2rg1p</UnderlyingIndexName>
+    </key>
+    <column id="362" parent="321" name="id">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="363" parent="321" name="creation_data">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="364" parent="321" name="description">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="365" parent="321" name="last_modified_data">
+      <DasType>datetime|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="366" parent="321" name="nom">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="367" parent="321" name="url_photo">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="368" parent="321" name="id_boutique">
+      <DasType>int|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <index id="369" parent="321" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="370" parent="321" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="371" parent="322" name="id_categorie">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="372" parent="322" name="id_produit">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="373" parent="322" name="FKe1ya58sdy2qwanajhyud5hi86">
+      <ColNames>id_categorie</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="374" parent="322" name="FK231v7gl6woj8c0yiwf9tysksf">
+      <ColNames>id_produit</ColNames>
+      <Type>btree</Type>
+    </index>
+    <column id="375" parent="323" name="next_val">
+      <DasType>bigint|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="376" parent="324" name="id">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="377" parent="324" name="creation_data">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="378" parent="324" name="description">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="379" parent="324" name="last_modified_data">
+      <DasType>datetime|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="380" parent="324" name="nom">
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="381" parent="324" name="url_photo">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="382" parent="324" name="code_produit">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="383" parent="324" name="description_en">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <column id="384" parent="324" name="id_boutique">
+      <DasType>int|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <column id="385" parent="324" name="prix">
+      <DasType>double|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <index id="386" parent="324" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="387" parent="324" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="388" parent="325" name="id_produit">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="389" parent="325" name="id_categorie">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="390" parent="325" name="FKnn7if0t3wipjne7bp3jt2x9y8">
+      <ColNames>id_produit</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="391" parent="325" name="FK2lo8gdkap6o8de5nknxdhav28">
+      <ColNames>id_categorie</ColNames>
+      <Type>btree</Type>
+    </index>
+    <column id="392" parent="326" name="id_user">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="393" parent="326" name="idboutique">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="394" parent="326" name="FKideihblkeq4e5rrxerp47jq5l">
+      <ColNames>id_user</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="395" parent="326" name="FK1c0afjqj8iy2003oxhro6uoc0">
+      <ColNames>idboutique</ColNames>
+      <Type>btree</Type>
+    </index>
+    <column id="396" parent="327" name="id_user">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="397" parent="327" name="id_role">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="398" parent="327" name="FKddk34iuo3vyufpr60smhcw1v9">
+      <ColNames>id_user</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="399" parent="327" name="FKqt0nuxyo58vb1uvx8ynoqssm4">
+      <ColNames>id_role</ColNames>
+      <Type>btree</Type>
+    </index>
   </database-model>
 </dataSource>

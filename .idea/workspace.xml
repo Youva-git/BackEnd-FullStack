@@ -4,7 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e85e523-3e8f-4a8d-85f4-51f6409656a4" name="Changes" comment="add readme" />
+    <list default="true" id="2e85e523-3e8f-4a8d-85f4-51f6409656a4" name="Changes" comment="feature : fix boutique h">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/45cb7958-9d77-4380-b4d6-79fbec2486c2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/45cb7958-9d77-4380-b4d6-79fbec2486c2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/back-end-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/back-end-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/controller/BoutiqueController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/controller/BoutiqueController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/controller/CategorieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/controller/CategorieController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/controller/ProduitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/controller/ProduitController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/dto/BoutiqueDto$BoutiqueDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/dto/BoutiqueDto$BoutiqueDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/dto/BoutiqueDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/dto/BoutiqueDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/dto/ProduitDto$ProduitDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/dto/ProduitDto$ProduitDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/dto/ProduitDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/dto/ProduitDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/modele/AppUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/modele/AppUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/modele/Boutique.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/modele/Boutique.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/modele/Produit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/modele/Produit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/modele/RoleUserFrom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/repository/ProduitRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/repository/ProduitRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/AppUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/AppUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/CategorieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/CategorieService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/ProduitService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/ProduitService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/impls/AppUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/impls/AppUserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/impls/BoutiqueServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/impls/BoutiqueServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/impls/CategorieServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/impls/CategorieServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/impls/ProduitServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/service/impls/ProduitServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/RemplissageBdd/ListBoutiques.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/RemplissageBdd/ListBoutiques.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/RemplissageBdd/ListUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/RemplissageBdd/ListUsers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/RemplissageBdd/ListsCategories.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/RemplissageBdd/ListsCategories.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/RemplissageBdd/ListsProduits.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/RemplissageBdd/ListsProduits.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/RemplissageBdd/RemplissageAutoBdd.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fullstack/backend/utils/RemplissageBdd/RemplissageAutoBdd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.fullstack.backend.BackEndApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.fullstack.backend.BackEndApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/swagger-ui/swagger.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/fullstack/backend/BackEndApplicationTests.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,10 +69,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/initProjet" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -45,6 +89,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/fullstack/backend/service/impls/AppUserServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/fullstack/backend/utils/RemplissageBdd/ListUsers.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="JpbToolWindowState">
@@ -66,6 +111,10 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MigrationScriptOptions">
+    <option name="ignoreImplicitObjects" value="true" />
+    <option name="ignoreSourceCode" value="false" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -77,6 +126,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;45cb7958-9d77-4380-b4d6-79fbec2486c2&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -87,13 +137,13 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/djellal/Bureau/Back-full-stack/Back-final/BackEnd-fullStack&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/djellal/Bureau/Back-full-stack/Back-final/serveur&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;xml.defaultSchemas&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;a115a25065b29adfe4c0b73391cd5b3a&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -127,7 +177,11 @@
       <recent name="com.fullstack.backend.service.impls" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fullstack.backend.utils.modeleEndPoint" />
       <recent name="com.fullstack.backend.modele" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -272,6 +326,13 @@
       <workItem from="1673342067455" duration="3614000" />
       <workItem from="1676393995105" duration="172000" />
       <workItem from="1676394176451" duration="2702000" />
+      <workItem from="1676485911050" duration="33209000" />
+      <workItem from="1676599788492" duration="2218000" />
+      <workItem from="1676640403564" duration="21000" />
+      <workItem from="1676640454132" duration="5253000" />
+      <workItem from="1676649343292" duration="292000" />
+      <workItem from="1676649654090" duration="79000" />
+      <workItem from="1676649764822" duration="1071000" />
     </task>
     <task id="LOCAL-00001" summary="Init projet">
       <created>1671274680821</created>
@@ -371,7 +432,98 @@
       <option name="project" value="LOCAL" />
       <updated>1676395631586</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="conf idea">
+      <created>1676398610130</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676398610130</updated>
+    </task>
+    <task id="LOCAL-00016" summary="gitignore">
+      <created>1676485600863</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1676485600863</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fix : boutique et categorie">
+      <created>1676485743082</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676485743082</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix : produit traduction">
+      <created>1676496918312</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1676496918312</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix : remplissage de la bdd">
+      <created>1676496957030</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1676496957030</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix : boutique produit">
+      <created>1676497029488</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1676497029488</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix : change role user">
+      <created>1676497437919</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1676497437919</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fix : assignation">
+      <created>1676500050147</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1676500050147</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fix : association">
+      <created>1676532406657</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1676532406657</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix : changeRole">
+      <created>1676533069809</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1676533069809</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fix : boutique user">
+      <created>1676566570267</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1676566570267</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feature : new version">
+      <created>1676593214824</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1676593214824</updated>
+    </task>
+    <task id="LOCAL-00027" summary="feature : fix boutique h">
+      <created>1676650621742</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1676650621743</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +534,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -403,18 +567,20 @@
     <MESSAGE value="build : ajout fichier de config" />
     <MESSAGE value="dump version" />
     <MESSAGE value="add readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="add readme" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/fullstack/backend/service/impls/AppUserServiceImpl.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="conf idea" />
+    <MESSAGE value="gitignore" />
+    <MESSAGE value="fix : boutique et categorie" />
+    <MESSAGE value="fix : produit traduction" />
+    <MESSAGE value="fix : remplissage de la bdd" />
+    <MESSAGE value="fix : boutique produit" />
+    <MESSAGE value="fix : change role user" />
+    <MESSAGE value="fix : assignation" />
+    <MESSAGE value="fix : association" />
+    <MESSAGE value="fix : changeRole" />
+    <MESSAGE value="fix : boutique user" />
+    <MESSAGE value="feature : new version" />
+    <MESSAGE value="feature : fix boutique h" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature : fix boutique h" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
